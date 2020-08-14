@@ -1,0 +1,29 @@
+{
+  "name": "vyfakturuj/simpleshop-api-php",
+  "description": "SimpleShop API",
+  "keywords": ["simpleshop", "api", "prodej"],
+  "homepage": "https://www.simpleshop.cz/api/",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Redbit s.r.o.",
+      "homepage": "https://www.redbit.cz/"
+    }
+  ],
+  "support": {
+    "email": "info@simpleshop.cz"
+  },
+  "autoload": {
+    "classmap": ["libs/"]
+  },
+  "require": {
+    "php": ">=5.6.0",
+    "ext-curl": "*",
+    "ext-json": "*",
+    "composer/ca-bundle": "^1.2"
+  },
+  "suggest": {
+    "composer/ca-bundle": "Umožňuje ověřit SSL certifikáty serveru"
+  }
+}
