@@ -77,9 +77,6 @@ echo '<pre><code class="json">' . json_encode($ret3, JSON_PRETTY_PRINT) . '</cod
 exit;   // zablokování smazání
 
 $ret4 = $simpleshop_api->deleteTemplate($_ID_ITEM);
-$ret5 = $simpleshop_api->deleteContact($_ID_CONTACT);
 
 echo '<h5>Načetli jsme data o průběhu smazání faktury ze systému:</h5>';
 echo '<pre><code class="json">' . json_encode($ret4, JSON_PRETTY_PRINT) . '</code></pre>';
-echo '<h5>Načetli jsme data o průběhu smazání kontaktu ze systému:</h5>';
-echo '<pre><code class="json">' . json_encode($ret5, JSON_PRETTY_PRINT) . '</code></pre>';

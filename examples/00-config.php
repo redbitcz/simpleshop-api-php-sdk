@@ -13,4 +13,4 @@ if (!defined('JSON_PRETTY_PRINT')) {
  * Nastavení SimpleShop API - níže prosím vyplňte váš e-mail a klíč
  */
 define('SIMPLESHOP_API_LOGIN', 'demo@simpleshop.cz');  // E-mail, kterým se přihlašujete do SimpleShop
-define('SIMPLESHOP_API_KEY', 'Q0OAZWnN3al576xmOvDskVq18aE2qpR1m4z8Jwbr');    // API klíč, který najdete v Nastavení -> API
+define('SIMPLESHOP_API_KEY', 'owOmRdjNrpvJZWY1vdaunaQezwEe1K4kG9labzyM');    // API klíč, který najdete v Nastavení -> API
