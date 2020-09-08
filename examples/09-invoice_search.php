@@ -10,7 +10,6 @@ $simpleshop_api = new SimpleShopAPI(SIMPLESHOP_API_LOGIN, SIMPLESHOP_API_KEY);
  * Některá čísla v příkladu níže jsou číselná označení systémových typů.
  * Například: 'flags' => 64 znamená, že hledáme doklady se přeplatkem vzniklým při uhrazení.
  * Popis všech hodnot najdete v dokumentaci: https://simpleshopcz.docs.apiary.io/#reference/faktury
- * Zkušenější uživatelé mohou použít výčet možných hodnot v přiložené třídě VyfakturujEnum.
  */
 $opt = array(
 //    'date_created_from' => '2016-10-01',

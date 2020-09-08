@@ -1,12 +1,10 @@
 <?php
 /**
- * @package Redbit\Vyfakturuj\SimpleShopAPI
+ * @package Redbit\SimpleShop\SimpleShopAPI
  * @license MIT
  * @copyright 2016-2018 Redbit s.r.o.
- * @author Redbit s.r.o. <info@vyfakturuj.cz>
- * @author Ing. Martin Dostál
+ * @author Redbit s.r.o. <info@simpleshop.cz>
  */
-
 
 /**
  * Tento soubor není pro běh API důležitý, pouze pomáhá zlepšit přehlednost ukázek
@@ -22,7 +20,7 @@ if ($web):
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE=" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css" integrity="sha256-aw9uGjVU5OJyMYN70Vu2kZ1DDVc1slcJCS2XvuPCPKo=" crossorigin="anonymous">
-        <link rel="shortcut icon" href="https://www.vyfakturuj.cz/favicon.ico">
+        <link rel="shortcut icon" href="https://www.simpleshop.cz/favicon.ico">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha256-VsEqElsCHSGmnmHXGQzvoWjWwoznFSZc6hs7ARLRacQ=" crossorigin="anonymous"></script>

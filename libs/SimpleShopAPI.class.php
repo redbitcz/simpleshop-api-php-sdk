@@ -1,13 +1,10 @@
 <?php
 /**
-* @package Redbit\Vyfakturuj\SimpleShopAPI
+* @package Redbit\SimpleShop\SimpleShopAPI
 * @license MIT
 * @copyright 2016-2020 Redbit s.r.o.
 * @author Redbit s.r.o. <info@simpleshop.cz>
-* @author Ing. Martin Dostál
 */
-
-
 
 /**
 * Třída pro práci s API SimpleShop.cz

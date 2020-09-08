@@ -24,11 +24,10 @@ $_ID_DOKUMENTU = 51672;
  * Některá čísla v příkladu níže jsou číselná označení systémových typů.
  * Například: 'type' => 3 znamená, že posíláme Potvrzení o úhradě, nikoliv třeba Upomínku.
  * Popis všech hodnot najdete v dokumentaci: https://simpleshopcz.docs.apiary.io/#reference/faktury
- * Zkušenější uživatelé mohou použít výčet možných hodnot v přiložené třídě VyfakturujEnum.
  */
 $opt = array(// šablona, kterou si přejeme odeslat
     'type' => 3,
-    'to' => 'demo@vyfakturuj.cz',// lze také použit tento zápis: 'demo1@vyfakturuj.cz, demo2@vyfakturuj.cz'
+    'to' => 'demo@simpleshop.cz',// lze také použit tento zápis: 'demo1@simpleshop.cz, demo2@simpleshop.cz'
 //    'cc' => '',
 //    'bcc' => '',
 //    'subject' => 'Testovací subjekt',

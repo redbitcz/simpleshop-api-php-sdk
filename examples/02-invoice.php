@@ -22,8 +22,7 @@ $simpleshop_api = new SimpleShopAPI(SIMPLESHOP_API_LOGIN, SIMPLESHOP_API_KEY);
 /*
  * Některá čísla v příkladu níže jsou číselná označení systémových typů.
  * Například: 'type' => 1 znamená, že vytvořený doklad bude Faktura a nikoliv třeba Výzva k platbě.
- * Popis všech hodnot najdete v dokumentaci: https://vyfakturujcz.docs.apiary.io/#reference/faktury
- * Zkušenější uživatelé mohou použít výčet možných hodnot v přiložené třídě VyfakturujEnum.
+ * Popis všech hodnot najdete v dokumentaci: https://simpleshopcz.docs.apiary.io/#reference/faktury
  */
 $opt = array(
     'type' => 1,

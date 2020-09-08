@@ -1,10 +1,10 @@
-# Příklady použití [PHP knihovny Vyfakturuj API](https://github.com/redbitcz/vyfakturuj-api-php)
+# Příklady použití [PHP knihovny SimpleShop API](https://github.com/redbitcz/simpleshop-api-php)
 
 ## Příprava pro použití příkladů
 Aby Vám níže uvedené příklady fungovaly, nastavte si nejdříve přihlášení do vašeho účtu. 
 
 V souboru [00-config.php](00-config.php) doplňte na označené místo Váš `login` a `API klíč`,
-které najdete v [nastavení API ve Vyfakturuj](https://app.vyfakturuj.cz/nastaveni/api/).
+které najdete v [nastavení API ve SimpleShop](https://app.simpleshop.cz/nastaveni/api/).
  
 ## Příklady
 
@@ -56,7 +56,7 @@ Ukázka, jak vyhledávat v seznamu faktur.
 ### 10. Produkty
 > Soubor: [10-product.php](10-product.php)
 
-Ukázka, jak vyhledávat v seznamu produktů (SimpleShop.cz).
+Ukázka, jak vyhledávat v seznamu produktů.
 
 ### 11. Platební metody
 > Soubor: [11-payment-method.php](11-payment-method.php)
