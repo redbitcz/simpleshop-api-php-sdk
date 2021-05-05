@@ -1,74 +1,60 @@
-# Příklady použití [PHP knihovny Vyfakturuj API](https://github.com/redbitcz/vyfakturuj-api-php)
+# Příklady použití [PHP knihovny SimpleShop API](https://github.com/redbitcz/simpleshop-api-php)
 
 ## Příprava pro použití příkladů
-Aby Vám níže uvedené příklady fungovaly, nastavte si nejdříve přihlášení do vašeho účtu. 
 
-V souboru [00-config.php](00-config.php) doplňte na označené místo Váš `login` a `API klíč`,
-které najdete v [nastavení API ve Vyfakturuj](https://app.vyfakturuj.cz/nastaveni/api/).
- 
+Aby Vám níže uvedené příklady fungovaly, nastavte si nejdříve přihlášení do vašeho účtu.
+
+V souboru [config_login.php](config_login.php) doplňte na označené místo Váš `login` a `API klíč`, které najdete
+v [nastavení API v SimpleShop](https://app.simpleshop.cz/nastaveni/api/).
+
+Soubor [config.php](config.php) je interní nastavení nezbytné pro běh SimpleShop API příkladů.
+
 ## Příklady
 
-### 1. Test spojení na server
-> Soubor: [01-test.php](01-test.php)
+### Test spojení na server
+
+> Soubor: [test-connection.php](test-connection.php)
 
 Otestuje připojení na server (musí se zobrazit welcome zpráva s datumem).
 
-### 2. Faktury
-> Soubor: [02-invoice.php](02-invoice.php)
+### Produkty
 
-Ukázka, jak vytvářet, updatovat, získávat a mazat faktury.
+> Adresář [Product](Product)
 
-### 3. Kontakty
-> Soubor: [03-contact.php](03-contact.php)
+Ukázky, jak vyhledávat produkty.
 
-Ukázka, jak vytvářet, updatovat, získávat a mazat kontakty.
+### Faktury
 
-### 4. Šablony
-> Soubor: [04-template.php](04-template.php)
+> Adresář [Invoice](Invoice)
 
-Ukázka, jak vytvářet, updatovat, získávat a mazat pravidelné faktury a šablony.
+Ukázky, jak vytvořit, upravit, číst, mazat či jinak pacovat s fakturami.
 
-### 5. Odeslání e-mailu s fakturou
-> Soubor: [05-invoice-sendMail.php](05-invoice-sendMail.php)
+### Pravidelné faktury
 
-Ukázka, jak odeslat e-mail s fakturou.
+> Adresář [Template](Template)
 
-### 6. Uhrazení faktury
-> Soubor: [06-invoice-setPayment.php](06-invoice-setPayment.php)
+Ukázky, jak vytvořit, upravit, číst, mazat pravidelné faktury
 
-Ukázka, jak provést uhrazení faktury.
+### Adresář a kontakty
 
-### 7. Zobrazení PDF
-> Soubor: [07-test-invoice-download.php](07-test-invoice-download.php)
+> Adresář [Contact](Contact)
 
-Ukázka, jak pracovat s funkci `test_invoice__asPdf()`. Tato funkce vrátí PDF aniž by uložila dokument (fakturu) do systému. Hodí se zejména pokud potřebujeme odladit vzhled faktury.
+Ukázky jak pracovat s Vaším adresářem a kontakty v něm.
 
-### 8. EET
-> Soubor: [08-invoice-sendEET.php](08-invoice-sendEET.php)
+### Nastavení
 
-Ukázka, jak poslat požadavek na zaúčtování dokladu v EET.
+> Adresář [Settings](Settings)
 
-### 9. Vyhledávání faktur
-> Soubor: [09-invoice_search.php](09-invoice_search.php)
+Práce s číselnou řadou nebo platebními metodami.
 
-Ukázka, jak vyhledávat v seznamu faktur.
+### Export Kdo koupil
 
-### 10. Produkty
-> Soubor: [10-product.php](10-product.php)
+> Adresář [Export](Export)
 
-Ukázka, jak vyhledávat v seznamu produktů (SimpleShop.cz).
+Ukázky, jak export vystávené objednávky v CSV
 
-### 11. Platební metody
-> Soubor: [11-payment-method.php](11-payment-method.php)
+### Ošetření chyb
 
-Ukázka, jak získat seznam platebních metod (způsobů uhrady).
-
-### 12. Číselné řady
-> Soubor: [12-number-series.php](12-number-series.php)
-
-Ukázka, jak získat seznam číslených řad.
-
-### 13. Ošetření chyb
-> Soubor: [13-error-handle.php](13-error-handle.php)
+> Soubor: [error-handle.php](error-handle.php)
 
 Ukázka, jak ošetřit chyby, které mohou při použití knihovny vzniknout.

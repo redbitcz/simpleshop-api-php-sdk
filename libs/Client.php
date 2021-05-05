@@ -7,16 +7,20 @@
  * @author Ing. Martin Dostál
  */
 
+namespace SimpleShopApi;
+
+use ClientException;
+
 /**
  * Třída pro práci s API SimpleShop.cz
  */
-class SimpleShopAPI
+class Client
 {
     // HTTP methods
-    const HTTP_METHOD_POST = 'POST';
-    const HTTP_METHOD_GET = 'GET';
-    const HTTP_METHOD_DELETE = 'DELETE';
-    const HTTP_METHOD_PUT = 'PUT';
+    private const HTTP_METHOD_POST = 'POST';
+    private const HTTP_METHOD_GET = 'GET';
+    private const HTTP_METHOD_DELETE = 'DELETE';
+    private const HTTP_METHOD_PUT = 'PUT';
 
     /** @var string */
     protected $endpointUrl = 'https://api.simpleshop.cz/2.0/';
@@ -50,7 +54,7 @@ class SimpleShopAPI
      *
      * @param array $data Data, která chceme použít při vytvoření.
      * @return array Vrátí kompletní informace o dokumentu
-     * @throws SimpleShopAPIException
+     * @throws ClientException
      */
     public function createInvoice($data)
     {
@@ -64,7 +68,7 @@ class SimpleShopAPI
      * @param int $id ID dokumentu
      * @param array $data Data, která chceme upravit
      * @return array Vrátí kompletní informace o dokumentu
-     * @throws SimpleShopAPIException
+     * @throws ClientException
      */
     public function updateInvoice($id, $data)
     {
@@ -77,7 +81,7 @@ class SimpleShopAPI
      *
      * @param int $id ID dokumentu
      * @return array Vrátí kompletní informace o dokumentu
-     * @throws SimpleShopAPIException
+     * @throws ClientException
      */
     public function getInvoice($id)
     {
@@ -90,7 +94,7 @@ class SimpleShopAPI
      *
      * @param array $args Data pro vyhledání faktury
      * @return array
-     * @throws SimpleShopAPIException
+     * @throws ClientException
      */
     public function getInvoices($args = [])
     {
@@ -104,7 +108,7 @@ class SimpleShopAPI
      * @param int $id ID faktury
      * @param array $data Data, která chceme použít pro vytvoření šablony.
      * @return array
-     * @throws SimpleShopAPIException
+     * @throws ClientException
      */
     public function invoice_sendMail_test($id, $data)
     {
@@ -119,7 +123,7 @@ class SimpleShopAPI
      * @param int $id ID faktury
      * @param array $data Data, která chceme použít pro vytvoření e-mailu
      * @return array
-     * @throws SimpleShopAPIException
+     * @throws ClientException
      */
     public function invoice_sendMail($id, $data)
     {
@@ -132,7 +136,7 @@ class SimpleShopAPI
      *
      * @param int $id
      * @return array
-     * @throws SimpleShopAPIException
+     * @throws ClientException
      */
     public function invoice_sendEet($id)
     {
@@ -147,7 +151,7 @@ class SimpleShopAPI
      * @param string|null $date Např: 2016-12-31, pokud je nastaveno na 0000-00-00 pak se zruší uhrada dokladu
      * @param int|float $amount Kolik bylo uhrazeno. Pokud je NULL, bude faktura uhrazena nezávisle na částce
      * @return array Detail dokladu po uhrazeni
-     * @throws SimpleShopAPIException
+     * @throws ClientException
      */
     public function invoice_setPayment($id, $date = null, $amount = null)
     {
@@ -167,7 +171,7 @@ class SimpleShopAPI
      *
      * @param int $id ID dokumentu
      * @return array Vrátí stav operace
-     * @throws SimpleShopAPIException
+     * @throws ClientException
      */
     public function deleteInvoice($id)
     {
@@ -180,7 +184,7 @@ class SimpleShopAPI
      *
      * @param array $data Data, která chceme použít při vytvoření.
      * @return array Vrátí kompletní informace o kontaktu
-     * @throws SimpleShopAPIException
+     * @throws ClientException
      */
     public function createContact($data)
     {
@@ -194,7 +198,7 @@ class SimpleShopAPI
      * @param int $id ID kontaktu
      * @param array $data Data, která chceme upravit
      * @return array Vrátí kompletní informace o kontaktu
-     * @throws SimpleShopAPIException
+     * @throws ClientException
      */
     public function updateContact($id, $data)
     {
@@ -207,7 +211,7 @@ class SimpleShopAPI
      *
      * @param int $id ID kontaktu
      * @return array Vrátí kompletní informace o kontaktu
-     * @throws SimpleShopAPIException
+     * @throws ClientException
      */
     public function getContact($id)
     {
@@ -220,7 +224,7 @@ class SimpleShopAPI
      *
      * @param array $args
      * @return array
-     * @throws SimpleShopAPIException
+     * @throws ClientException
      */
     public function getContacts($args = [])
     {
@@ -233,7 +237,7 @@ class SimpleShopAPI
      *
      * @param int $id ID kontaktu
      * @return array Vrátí stav operace
-     * @throws SimpleShopAPIException
+     * @throws ClientException
      */
     public function deleteContact($id)
     {
@@ -247,7 +251,7 @@ class SimpleShopAPI
      * @param int $id ID šablony|pravidelné faktury
      * @param array $data Data, která chceme upravit
      * @return array Vrátí kompletní informace o položce
-     * @throws SimpleShopAPIException
+     * @throws ClientException
      */
     public function updateTemplate($id, $data)
     {
@@ -260,7 +264,7 @@ class SimpleShopAPI
      *
      * @param int $id ID šablony|pravidelné faktury
      * @return array Vrátí kompletní informace
-     * @throws SimpleShopAPIException
+     * @throws ClientException
      */
     public function getTemplate($id)
     {
@@ -273,7 +277,7 @@ class SimpleShopAPI
      *
      * @param array $args Data pro vyhledání faktur
      * @return array
-     * @throws SimpleShopAPIException
+     * @throws ClientException
      */
     public function getTemplates($args = [])
     {
@@ -286,7 +290,7 @@ class SimpleShopAPI
      *
      * @param int $id ID šablony|pravidelné faktury
      * @return array Vrátí stav operace
-     * @throws SimpleShopAPIException
+     * @throws ClientException
      */
     public function deleteTemplate($id)
     {
@@ -299,7 +303,7 @@ class SimpleShopAPI
      *
      * @param array $args Data pro vyhledání faktur
      * @return array
-     * @throws SimpleShopAPIException
+     * @throws ClientException
      */
     public function getProducts($args = [])
     {
@@ -311,7 +315,7 @@ class SimpleShopAPI
      * Vrati seznam platebních metod
      *
      * @return array
-     * @throws SimpleShopAPIException
+     * @throws ClientException
      */
     public function getSettings_paymentMethods()
     {
@@ -323,7 +327,7 @@ class SimpleShopAPI
      * Vrati seznam číselných řad
      *
      * @return array
-     * @throws SimpleShopAPIException
+     * @throws ClientException
      */
     public function getSettings_numberSeries()
     {
@@ -335,7 +339,7 @@ class SimpleShopAPI
      * Testovací funkce pro ověření správného spojení se serverem
      *
      * @return array
-     * @throws SimpleShopAPIException
+     * @throws ClientException
      */
     public function test()
     {
@@ -350,7 +354,7 @@ class SimpleShopAPI
      *
      * @param array $data
      * @return array
-     * @throws SimpleShopAPIException
+     * @throws ClientException
      */
     public function test_invoice__asPdf($data)
     {
@@ -386,7 +390,7 @@ class SimpleShopAPI
      * @param $method
      * @param array|null $data
      * @return array|mixed
-     * @throws SimpleShopAPIException
+     * @throws ClientException
      */
     private function fetchRequest($path, $method, $data = [])
     {
@@ -422,7 +426,7 @@ class SimpleShopAPI
         $this->lastInfo['dataSend'] = $data;
 
         if (curl_errno($curl) !== 0) {
-            throw new SimpleShopAPIException(curl_error($curl), curl_errno($curl));
+            throw new ClientException(curl_error($curl), curl_errno($curl));
         }
 
         curl_close($curl);
@@ -464,7 +468,7 @@ class SimpleShopAPI
      * @param $path
      * @param array|null $data
      * @return array|mixed
-     * @throws SimpleShopAPIException
+     * @throws ClientException
      */
     protected function fetchGet($path, $data = null)
     {
@@ -476,7 +480,7 @@ class SimpleShopAPI
      * @param $path
      * @param array|null $data
      * @return array|mixed
-     * @throws SimpleShopAPIException
+     * @throws ClientException
      */
     protected function fetchPost($path, $data = null)
     {
@@ -488,7 +492,7 @@ class SimpleShopAPI
      * @param $path
      * @param array|null $data
      * @return array|mixed
-     * @throws SimpleShopAPIException
+     * @throws ClientException
      */
     protected function fetchPut($path, $data = null)
     {
@@ -500,7 +504,7 @@ class SimpleShopAPI
      * @param $path
      * @param array|null $data
      * @return array|mixed
-     * @throws SimpleShopAPIException
+     * @throws ClientException
      */
     protected function fetchDelete($path, $data = null)
     {
@@ -509,12 +513,12 @@ class SimpleShopAPI
 
     /**
      * @param string $endpointUrl
-     * @throws SimpleShopAPIException
+     * @throws ClientException
      */
     public function setEndpointUrl($endpointUrl)
     {
         if (preg_match('~https?://~i', $endpointUrl) !== 1) {
-            throw new SimpleShopAPIException(
+            throw new ClientException(
                 sprintf(
                     'Endpoint URL must be a valid absolute URL on HTTP(S) protocol, \'%s\' is not valid absolute URL',
                     $endpointUrl

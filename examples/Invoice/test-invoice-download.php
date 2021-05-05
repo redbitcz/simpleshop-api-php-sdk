@@ -15,7 +15,7 @@ require_once __DIR__ . '/../config.php';
  * Pokud se podaří fakturu vytvořit, pak je poslána ve formátu PDF na výstup. Jinak je vráceno pole.
  */
 
-$simpleshop_api = new SimpleShopAPI(SIMPLESHOP_API_LOGIN, SIMPLESHOP_API_KEY);
+$simpleshop_api = new SimpleShopApi\Client(SIMPLESHOP_API_LOGIN, SIMPLESHOP_API_KEY);
 
 /**
  * Zadejte informace o faktuře pro její vytvoření

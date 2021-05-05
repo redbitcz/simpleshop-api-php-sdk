@@ -6,9 +6,13 @@
  * @author Redbit s.r.o. <info@simpleshop.cz>
  */
 
+// Search optional composer if is package used as literally project - needed for apply ca-bundle package
+if (file_exists(__DIR__ . '/../../vendor/autoload.php')) {
+    require_once __DIR__ . '/../../vendor/autoload.php';
+}
 require_once __DIR__ . '/../config_login.php';
 
-$simpleshop_api = new SimpleShopAPI(SIMPLESHOP_API_LOGIN, SIMPLESHOP_API_KEY, 'https://api.simpleshop.cz/2.0/');
+$simpleshop_api = new SimpleShopApi\Client(SIMPLESHOP_API_LOGIN, SIMPLESHOP_API_KEY);
 
 /**
  * Zadejte informace o exportu

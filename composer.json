@@ -1,5 +1,5 @@
 {
-  "name": "vyfakturuj/simpleshop-api-php",
+  "name": "redbitcz/simpleshop-api-php",
   "description": "SimpleShop API",
   "keywords": ["simpleshop", "api", "prodej"],
   "homepage": "https://www.simpleshop.cz/api/",
@@ -15,10 +15,12 @@
     "email": "info@simpleshop.cz"
   },
   "autoload": {
-    "classmap": ["libs/"]
+    "psr-4": {
+      "SimpleShopApi\\": "libs/"
+    }
   },
   "require": {
-    "php": ">=5.6.0",
+    "php": ">=7.3.0",
     "ext-curl": "*",
     "ext-json": "*",
     "composer/ca-bundle": "^1.2"

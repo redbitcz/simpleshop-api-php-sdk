@@ -16,7 +16,7 @@ require_once __DIR__ . '/../simple-autoload.php';
  */
 
 /** Zadejte přilhašovací jméno (e-mail) */
-define('SIMPLESHOP_API_LOGIN', 'demo@simpleshop.cz');  // E-mail, kterým se přihlašujete do SimpleShop
+define('SIMPLESHOP_API_LOGIN', '');  // E-mail, kterým se přihlašujete do SimpleShop
 
 /** Zadejte API klíč */
 define('SIMPLESHOP_API_KEY', '');
