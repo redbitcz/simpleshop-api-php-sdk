@@ -51,5 +51,10 @@ require_once __DIR__ . '/config.php';
             <li><a href="Settings/payment-method.php">payment-method.php</a></li>
         </ul>
     </li>
+    <li><h3>Export - Kdo koupil</h3>
+        <ul>
+            <li><a href="Export/who-bought.php">who-bought.php</a></li>
+        </ul>
+    </li>
     <li><a href="error-handle.php">Ošetření chyb</a></li>
 </ul>

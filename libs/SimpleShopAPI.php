@@ -1,17 +1,15 @@
 <?php
 /**
-* @package Redbit\Vyfakturuj\SimpleShopAPI
-* @license MIT
-* @copyright 2016-2020 Redbit s.r.o.
-* @author Redbit s.r.o. <info@simpleshop.cz>
-* @author Ing. Martin Dostál
-*/
-
-
+ * @package Redbit\Vyfakturuj\SimpleShopAPI
+ * @license MIT
+ * @copyright 2016-2020 Redbit s.r.o.
+ * @author Redbit s.r.o. <info@simpleshop.cz>
+ * @author Ing. Martin Dostál
+ */
 
 /**
-* Třída pro práci s API SimpleShop.cz
-*/
+ * Třída pro práci s API SimpleShop.cz
+ */
 class SimpleShopAPI
 {
     // HTTP methods
@@ -33,13 +31,17 @@ class SimpleShopAPI
     protected $lastInfo;
 
     /**
-    * @param string $login
-    * @param string $apiHash
-    */
-    public function __construct($login, $apiHash)
+     * @param string $login
+     * @param string $apiHash
+     * @param string $endpointUrl
+     */
+    public function __construct($login, $apiHash, $endpointUrl = null)
     {
         $this->login = $login;
         $this->apiHash = $apiHash;
+        if ($endpointUrl !== null) {
+            $this->setEndpointUrl($endpointUrl);
+        }
     }
 
 
@@ -448,6 +450,15 @@ class SimpleShopAPI
         }
     }
 
+    /**
+     * @param int $product_id
+     * @param array $args
+     * @return mixed|array
+     */
+    public function getExportWhoBought($product_id, $args = [])
+    {
+        return $this->fetchGet('export/who-bought/product/' . $product_id . '/?' . http_build_query($args));
+    }
 
     /**
      * @param $path
@@ -494,5 +505,23 @@ class SimpleShopAPI
     protected function fetchDelete($path, $data = null)
     {
         return $this->fetchRequest($path, self::HTTP_METHOD_DELETE, $data);
+    }
+
+    /**
+     * @param string $endpointUrl
+     * @throws SimpleShopAPIException
+     */
+    public function setEndpointUrl($endpointUrl)
+    {
+        if (preg_match('~https?://~i', $endpointUrl) !== 1) {
+            throw new SimpleShopAPIException(
+                sprintf(
+                    'Endpoint URL must be a valid absolute URL on HTTP(S) protocol, \'%s\' is not valid absolute URL',
+                    $endpointUrl
+                )
+            );
+        }
+
+        $this->endpointUrl = $endpointUrl;
     }
 }
