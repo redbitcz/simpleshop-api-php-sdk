@@ -1,6 +1,6 @@
 <?php
 /**
- * @package Redbitcz\Vyfakturuj\SimpleShopAPI
+ * @package Redbitcz\SimpleShop\Api
  * @license MIT
  * @copyright 2016-2021 Redbit s.r.o.
  * @author Redbit s.r.o. <info@simpleshop.cz>
