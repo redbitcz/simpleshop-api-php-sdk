@@ -16,14 +16,15 @@
   },
   "autoload": {
     "psr-4": {
-      "SimpleShopApi\\": "libs/"
+      "SimpleShop\\Api\\": "libs/"
     }
   },
   "require": {
     "php": ">=7.3.0",
     "ext-curl": "*",
     "ext-json": "*",
-    "composer/ca-bundle": "^1.2"
+    "composer/ca-bundle": "^1.2",
+    "vyfakturuj/vyfakturuj-api-php": ">=2.5.1"
   },
   "suggest": {
     "composer/ca-bundle": "Umožňuje ověřit SSL certifikáty serveru"

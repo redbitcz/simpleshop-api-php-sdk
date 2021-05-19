@@ -13,7 +13,7 @@ try {
     // Ukázka stejná, jako v příkladu 01-test.php
     echo "<h2>Ošetření chyb</h2>\n";
 
-    $simpleshop_api = new SimpleShopApi\Client(SIMPLESHOP_API_LOGIN, SIMPLESHOP_API_KEY);
+    $simpleshop_api = new SimpleShop\Api\SimpleShopAPI(SIMPLESHOP_API_LOGIN, SIMPLESHOP_API_KEY);
 
     // Úprava URL pro ukázku, která je záměrně poškozená, aby selhala
     $simpleshop_api->setEndpointUrl('https://invalid.domain.simpleshop.cz/2.0/');
@@ -21,11 +21,11 @@ try {
     $result = $simpleshop_api->test();
 
     echo '<pre><code class="json">' . json_encode($result, JSON_PRETTY_PRINT) . '</code></pre>';
-} catch (SimpleShopApi\ClientException $e) {
+} catch (VyfakturujAPIException $e) {
     // Toto se spustí, pokud kdekoliv v try {...} dojde k chybě (tzv. výjimce)
     // Vypíšeme uživateli omluvu, že se nepodařilo jeho požadavek dokončit
     // Uživatele nezatěžujeme technickými detaily, ty nechme technikovi
-    echo "<div class=\"alert alert-danger\">Je nám líto, ale při zpracování došlo k chybě. Zkuste to prosím později, nebo nás kontaktujte.</div>\n";
+    echo '<div class="alert alert-danger">Je nám líto, ale při zpracování došlo k chybě. Zkuste to prosím později, nebo nás kontaktujte.</div>';
 
     // Technikovi zapíšeme chybu do logů, aby věděl, co se děje
     trigger_error($e, E_USER_WARNING);
