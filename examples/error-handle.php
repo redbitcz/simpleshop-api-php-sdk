@@ -13,7 +13,7 @@ try {
     // Ukázka stejná, jako v příkladu 01-test.php
     echo "<h2>Ošetření chyb</h2>\n";
 
-    $simpleshop_api = new SimpleShop\Api\SimpleShopAPI(SIMPLESHOP_API_LOGIN, SIMPLESHOP_API_KEY);
+    $simpleshop_api = new \Redbitcz\SimpleShop\Api\SimpleShopApi(SIMPLESHOP_API_LOGIN, SIMPLESHOP_API_KEY);
 
     // Úprava URL pro ukázku, která je záměrně poškozená, aby selhala
     $simpleshop_api->setEndpointUrl('https://invalid.domain.simpleshop.cz/2.0/');

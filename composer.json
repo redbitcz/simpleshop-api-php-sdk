@@ -14,11 +14,6 @@
   "support": {
     "email": "info@simpleshop.cz"
   },
-  "autoload": {
-    "psr-4": {
-      "SimpleShop\\Api\\": "libs/"
-    }
-  },
   "require": {
     "php": ">=7.3.0",
     "ext-curl": "*",
@@ -28,5 +23,10 @@
   },
   "suggest": {
     "composer/ca-bundle": "Umožňuje ověřit SSL certifikáty serveru"
+  },
+  "autoload": {
+    "psr-4": {
+      "Redbitcz\\SimpleShop\\Api\\": "libs/"
+    }
   }
 }

@@ -2,7 +2,7 @@
 
 require_once __DIR__ . '/config.php';
 
-$simpleshop_api = new SimpleShop\Api\SimpleShopAPI(SIMPLESHOP_API_LOGIN, SIMPLESHOP_API_KEY);
+$simpleshop_api = new \Redbitcz\SimpleShop\Api\SimpleShopApi(SIMPLESHOP_API_LOGIN, SIMPLESHOP_API_KEY);
 
 $result = $simpleshop_api->test();
 

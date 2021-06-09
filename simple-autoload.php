@@ -1,10 +1,9 @@
 <?php
 /**
- * @package Redbit\SimpleShop\Api
+ * @package Redbitcz\SimpleShop\Api
  * @license MIT
- * @copyright 2016-2018 Redbit s.r.o.
+ * @copyright 2016-2021 Redbit s.r.o.
  * @author Redbit s.r.o. <info@simpleshop.cz>
- * @author Ing. Martin Dostál
  */
 
 /**
