@@ -27,5 +27,5 @@ $args = ['strict' => 1];
 $export = $simpleshop_api->getExportWhoBought($product_id, $args);
 
 header('Content-Type: application/csv');
-header('Content-Disposition: attachment; filename="Kdo_koupil_export_' . date('d.m.Y') . '.csv";');
-die($export['csv']);
+header('Content-Disposition: attachment; filename="simpleshop-export-customer-list-' . date('Y-m-d') . '.csv";');
+echo $export['csv'];
