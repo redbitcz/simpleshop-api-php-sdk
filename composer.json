@@ -1,6 +1,6 @@
 {
-  "name": "redbitcz/simpleshop-api-php",
-  "description": "SimpleShop API",
+  "name": "redbitcz/simpleshop-api-php-sdk",
+  "description": "SimpleShop API SDK for PHP",
   "keywords": ["simpleshop", "api", "prodej"],
   "homepage": "https://www.simpleshop.cz/api/",
   "type": "library",
