@@ -10,7 +10,7 @@
 if (file_exists(__DIR__ . '/../../vendor/autoload.php')) {
     require_once __DIR__ . '/../../vendor/autoload.php';
 }
-require_once __DIR__ . '/../config_login.php';
+require_once __DIR__ . '/../config.php';
 
 $simpleshop_api = new \Redbitcz\SimpleShop\Api\SimpleShopApi(SIMPLESHOP_API_LOGIN, SIMPLESHOP_API_KEY);
 
