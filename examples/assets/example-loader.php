@@ -73,7 +73,7 @@ register_shutdown_function(
 </head>
 <body>
 <div class="container">
-    <h1 class="mt-5"><a href="https://www.simpleshop.cz/api/">SimpleShopAPI</a> příklady</h1>
+    <h1 class="mt-5"><a href="https://www.simpleshop.cz/api/">SimpleShop API</a> příklady</h1>
     <div class="jumbotron mt-3">
             <?php
             endif;
