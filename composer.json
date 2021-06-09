@@ -18,7 +18,6 @@
     "php": ">=7.3.0",
     "ext-curl": "*",
     "ext-json": "*",
-    "composer/ca-bundle": "^1.2",
     "vyfakturuj/vyfakturuj-api-php": ">=2.5.1"
   },
   "suggest": {
