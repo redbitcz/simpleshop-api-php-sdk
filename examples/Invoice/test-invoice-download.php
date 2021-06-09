@@ -24,6 +24,7 @@ $simpleshop_api = new SimpleShop\Api\SimpleShopAPI(SIMPLESHOP_API_LOGIN, SIMPLES
  * @link https://simpleshopcz.docs.apiary.io/#reference/faktury
  */
 $opt = [
+    'number' => 'FA000001',
     'customer_IC' => '123456789',
     'customer_DIC' => 'CZ123456789',
     'customer_name' => 'Ukázková Firma',
