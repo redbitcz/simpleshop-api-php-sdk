@@ -1,19 +1,19 @@
 <?php
 /**
- * @package Redbit\SimpleShop\Api
+ * @package Redbitcz\SimpleShop\Api
  * @license MIT
- * @copyright 2016-2020 Redbit s.r.o.
+ * @copyright 2016-2021 Redbit s.r.o.
  * @author Redbit s.r.o. <info@simpleshop.cz>
  */
 
-namespace SimpleShop\Api;
+namespace Redbitcz\SimpleShop\Api;
 use VyfakturujAPI;
 use VyfakturujAPIException;
 
 /**
  * Třída pro práci s API SimpleShop
  */
-class SimpleShopAPI extends VyfakturujAPI
+class SimpleShopApi extends VyfakturujAPI
 {
     /** @var string */
     protected $endpointUrl = 'https://api.simpleshop.cz/2.0/';

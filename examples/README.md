@@ -4,7 +4,7 @@
 
 Aby Vám níže uvedené příklady fungovaly, nastavte si nejdříve přihlášení do vašeho účtu.
 
-V souboru [config_login.php](config_login.php) doplňte na označené místo Váš `login` a `API klíč`, které najdete
+V souboru [config.php](config.php) doplňte na označené místo Váš `login` a `API klíč`, které najdete
 v [nastavení API v SimpleShop](https://app.simpleshop.cz/nastaveni/api/).
 
 Soubor [config.php](config.php) je interní nastavení nezbytné pro běh SimpleShop API příkladů.

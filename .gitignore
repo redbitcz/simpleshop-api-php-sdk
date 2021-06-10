@@ -1,4 +1,2 @@
-.idea/
-nbproject/
-vendor/
+/vendor/
 /composer.lock

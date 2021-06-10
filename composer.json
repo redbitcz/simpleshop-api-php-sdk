@@ -1,6 +1,6 @@
 {
-  "name": "redbitcz/simpleshop-api-php",
-  "description": "SimpleShop API",
+  "name": "redbitcz/simpleshop-api-php-sdk",
+  "description": "SimpleShop API SDK for PHP",
   "keywords": ["simpleshop", "api", "prodej"],
   "homepage": "https://www.simpleshop.cz/api/",
   "type": "library",
@@ -14,19 +14,18 @@
   "support": {
     "email": "info@simpleshop.cz"
   },
-  "autoload": {
-    "psr-4": {
-      "SimpleShop\\Api\\": "libs/"
-    }
-  },
   "require": {
     "php": ">=7.3.0",
     "ext-curl": "*",
     "ext-json": "*",
-    "composer/ca-bundle": "^1.2",
     "vyfakturuj/vyfakturuj-api-php": ">=2.5.1"
   },
   "suggest": {
     "composer/ca-bundle": "Umožňuje ověřit SSL certifikáty serveru"
+  },
+  "autoload": {
+    "psr-4": {
+      "Redbitcz\\SimpleShop\\Api\\": "libs/"
+    }
   }
 }
