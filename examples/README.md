@@ -51,7 +51,7 @@ Práce s číselnou řadou nebo platebními metodami.
 
 > Adresář [Export](Export)
 
-Ukázky, jak export vystávené objednávky v CSV
+Ukázky, jak exportovat vystávené objednávky v CSV
 
 ### Ošetření chyb
 
