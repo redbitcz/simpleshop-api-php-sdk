@@ -16,6 +16,7 @@
   },
   "require": {
     "php": ">=7.3.0",
+    "composer-runtime-api": "^2.0",
     "ext-curl": "*",
     "ext-json": "*",
     "vyfakturuj/vyfakturuj-api-php": ">=2.5.1"
