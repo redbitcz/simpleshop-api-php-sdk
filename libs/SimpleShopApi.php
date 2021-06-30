@@ -39,4 +39,9 @@ class SimpleShopApi extends VyfakturujAPI
     {
         return $this->fetchGet('export/who-bought/product/' . $product_id . '/?' . http_build_query($args));
     }
+
+    public function getInvoiceSellOnName($invoice_id)
+    {
+        return $this->fetchGet('invoice/' . $invoice_id . '/sell-on-name');
+    }
 }
