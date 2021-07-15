@@ -25,6 +25,7 @@ require_once __DIR__ . '/config.php';
             <li><a href="Invoice/set-payment-to-invoice.php">set-payment-to-invoice.php</a></li>
             <li><a href="Invoice/test-invoice-download.php">test-invoice-download.php</a></li>
             <li><a href="Invoice/update-invoice.php">update-invoice.php</a></li>
+            <li><a href="Invoice/get-sell-on-name-items.php">get-sell-on-name-items.php</a></li>
         </ul>
     </li>
     <li><h3>Pravidelné faktury</h3>
