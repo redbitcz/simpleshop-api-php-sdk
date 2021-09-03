@@ -6,6 +6,38 @@
 
 ## Instalace
 
+### S přiklady
+
+Pokud chcete prohlednout příklady z knihovny, je nutné stáhnout repositář pomocí příkazu:
+
+```shell
+git clone https://github.com/redbitcz/simpleshop-api-php-sdk.git
+```
+
+anebo pomocí tlačítka `Code > Download ZIP` vpravo nahoře. V druhém případě bude třeba kód z archivu rozbalit.
+
+Pro instalací nutných k běhu balíčků, uvnitř stažené složky spusťte příkaz
+
+```shell
+composer install
+```
+
+Pak v souboru `examples/config.php` doplňte přihlašovací údaje.
+
+Pak stačí spustit web-server ve složce `examples/` a můžete tyto testovácí přiklady vyzkoušet.
+
+Od verze 5.4 PHP má vlastní vestavěný web-server, takže můžete použit ho.
+Ve složce `examples/` spusťte příkaz:
+
+```shell
+php -S localhost:8000
+```
+
+(jestli port bude obsazen, zkuste jakýkoliv jiný, třeba 8001, 8002, 8080 atd.)
+a v prohlížeči navštivte stránku `http://localhost:8000`.
+
+### Samotná knihovna
+
 Nainstalujte knihovnu pomocí Composeru (doporučujeme):
 
 ```shell
@@ -41,6 +73,8 @@ $invoice = $simpleshop->getInvoice(12345);
 Knihovna pro správné fungování potřebuje:
 
 - PHP verze 7.3 a vyšší
+- Composer (instalace ve [Windows](https://getcomposer.org/doc/00-intro.md#installation-windows) 
+    a v [Linux/Unix/macOS](https://getcomposer.org/doc/00-intro.md#installation-windows))
 - Rozšíření cURL
 - Rozšíření JSON
 
