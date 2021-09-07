@@ -8,23 +8,23 @@
 
 ### S přiklady
 
-Pokud chcete prohlednout příklady z knihovny, je nutné stáhnout repositář pomocí příkazu:
+Pro stažení celého repozitáře proveďte příkaz:
 
 ```shell
 git clone https://github.com/redbitcz/simpleshop-api-php-sdk.git
 ```
 
-anebo pomocí tlačítka `Code > Download ZIP` vpravo nahoře. V druhém případě bude třeba kód z archivu rozbalit.
+Případně můžete stáhnout celá ZIP archív přes `Code > Download ZIP` vpravo nahoře. V tomto případě bude třeba kód z archivu rozbalit.
 
-Pro instalací nutných k běhu balíčků, uvnitř stažené složky spusťte příkaz
+Po stažení je nutné dotáhnout navazující balíčky nutné pro běh:
 
 ```shell
 composer install
 ```
 
-Pak v souboru `examples/config.php` doplňte přihlašovací údaje.
+V souboru `examples/config.php` doplňte přihlašovací údaje.
 
-Pak stačí spustit web-server ve složce `examples/` a můžete tyto testovácí přiklady vyzkoušet.
+Ve složce `examples/` naleznete nejrůznější příklady, které můžete hned vyzkoušet.
 
 Od verze 5.4 PHP má vlastní vestavěný web-server, takže můžete použit ho.
 Ve složce `examples/` spusťte příkaz:
@@ -33,8 +33,8 @@ Ve složce `examples/` spusťte příkaz:
 php -S localhost:8000
 ```
 
-(jestli port bude obsazen, zkuste jakýkoliv jiný, třeba 8001, 8002, 8080 atd.)
-a v prohlížeči navštivte stránku `http://localhost:8000`.
+(pokud bude port obsazen, zkuste jakýkoliv jiný, například: 8001, 8002, 8080, ...)
+V prohlížeči navštivte stránku `http://localhost:8000`.
 
 ### Samotná knihovna
 
