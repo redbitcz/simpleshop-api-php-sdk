@@ -6,9 +6,11 @@
  * @author Redbit s.r.o. <info@simpleshop.cz>
  */
 
+use Redbitcz\SimpleShop\Api\SimpleShopApi;
+
 require_once __DIR__ . '/../config.php';
 
-$simpleshop_api = new \Redbitcz\SimpleShop\Api\SimpleShopApi(SIMPLESHOP_API_LOGIN, SIMPLESHOP_API_KEY);
+$simpleshop_api = new SimpleShopApi(SIMPLESHOP_API_LOGIN, SIMPLESHOP_API_KEY);
 
 /**
  * Informace o odběrateli (kontaktu), který bude použit ve faktuře
@@ -58,7 +60,6 @@ $invoiceParams = [
     'type' => 1,
     'id_customer' => $contactId, // <-- Přidáme vazbu na kontakt z adresáře jako odběratele pro vytvořenou fakturu
     'calculate_vat' => 2,
-    'payment_method' => 2,
     'customer_IC' => $contactParams['IC'],
     'customer_name' => $contactParams['name'],
     'customer_street' => $contactParams['street'],
@@ -83,7 +84,6 @@ $invoiceParams = [
             'vat_rate' => 0,
         ]
     ],
-    'action_after_create_send_to_eet' => true
 ];
 
 $invoice = $simpleshop_api->createInvoice($invoiceParams);

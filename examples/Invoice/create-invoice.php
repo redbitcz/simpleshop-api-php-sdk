@@ -6,9 +6,11 @@
  * @author Redbit s.r.o. <info@simpleshop.cz>
  */
 
+use Redbitcz\SimpleShop\Api\SimpleShopApi;
+
 require_once __DIR__ . '/../config.php';
 
-$simpleshop_api = new \Redbitcz\SimpleShop\Api\SimpleShopApi(SIMPLESHOP_API_LOGIN, SIMPLESHOP_API_KEY);
+$simpleshop_api = new SimpleShopApi(SIMPLESHOP_API_LOGIN, SIMPLESHOP_API_KEY);
 
 /**
  * Podklady pro vytvoření faktury
@@ -23,7 +25,6 @@ $simpleshop_api = new \Redbitcz\SimpleShop\Api\SimpleShopApi(SIMPLESHOP_API_LOGI
 $params = [
     'type' => 1,
     'calculate_vat' => 2,
-    'payment_method' => 2,
     'customer_IC' => '123456789',
     'customer_DIC' => 'CZ123456789',
     'customer_name' => 'Ukázková Firma',
@@ -49,7 +50,6 @@ $params = [
             'vat_rate' => 0,
         ]
     ],
-    'action_after_create_send_to_eet' => true
 ];
 
 $invoice = $simpleshop_api->createInvoice($params);
